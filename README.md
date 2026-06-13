@@ -2,8 +2,7 @@
 
 > Comprehensive Terraform Associate (004) certification preparation repository featuring exam-focused study notes, hands-on labs, practice questions, mock exams, cheatsheets, HCP Terraform concepts, and real-world Terraform examples.
 
-
-<img src="Terraform-Associate(004)-banner.png" alt="Terraform Associate (004) Exam Prep Banner">
+![Terraform Associate (004) Exam Prep Banner](./Terraform-Associate(004)-banner.png)
 
 ---
 
