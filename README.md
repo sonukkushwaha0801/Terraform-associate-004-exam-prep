@@ -4,6 +4,7 @@
 
 
 <img src="Terraform-Associate(004)-banner.png" alt="Terraform Associate (004) Exam Prep Banner">
+
 ---
 
 ## Certification Overview
