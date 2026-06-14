@@ -2,108 +2,159 @@
 
 ## Domain Overview
 
-HCP Terraform is HashiCorp's managed SaaS platform for Terraform.
+HCP Terraform is HashiCorp's managed platform for provisioning, managing, collaborating on, and governing infrastructure using Terraform.
 
-It provides:
+Instead of running Terraform entirely on a local machine, HCP Terraform provides:
 
-- Remote State Storage
-- State Locking
+- Remote Execution
+- Centralized State Management
 - Team Collaboration
-- Remote Runs
+- Governance Controls
 - Policy Enforcement
-- Centralized Infrastructure Management
+- Audit Trails
+- VCS Integration
+- Infrastructure Automation
 
-HCP Terraform allows teams to manage Terraform workflows without maintaining their own Terraform infrastructure.
+HCP Terraform is designed to help teams manage Terraform at scale while improving security, consistency, and operational efficiency.
+
+This domain covers:
+
+- Creating infrastructure with HCP Terraform
+- Collaboration and governance capabilities
+- Workspaces and projects
+- HCP Terraform integrations
 
 ---
 
 # Objectives
 
-## 8a - Explain HCP Terraform and Its Benefits
+## 8a - Use HCP Terraform to Create Infrastructure
 
 Understand:
 
-- What HCP Terraform is
-- Why organizations use it
-- Benefits over local workflows
-- SaaS Terraform management
+- HCP Terraform Fundamentals
+- Remote Operations
+- Remote Execution
+- Terraform Runs
+- State Management
+- VCS-driven Workflows
+- CLI-driven Workflows
 
 ---
 
-## 8b - Describe HCP Terraform Workspaces
+## 8b - Describe HCP Terraform Collaboration and Governance Features
 
 Understand:
 
-- Workspace concepts
-- Workspace isolation
-- State separation
-- Environment management
+- Teams
+- Role-Based Access Control (RBAC)
+- Audit Trails
+- Policy Enforcement
+- Private Module Registry
+- Cost Estimation
+- Drift Detection
+- Health Assessments
+- Variable Sets
 
 ---
 
-## 8c - Understand the HCP Terraform Workflow
+## 8c - Describe How to Organize and Use HCP Terraform Workspaces and Projects
 
 Understand:
 
-- VCS-driven workflows
-- Remote execution
-- Plan and Apply process
-- Team collaboration
+- HCP Terraform Workspaces
+- Projects
+- Workspace Isolation
+- Environment Separation
+- Run Triggers
+- Workspace Relationships
+- Workspace Organization
+
+---
+
+## 8d - Configure and Use HCP Terraform Integration
+
+Understand:
+
+- terraform login
+- HCP Terraform Authentication
+- VCS Integration
+- GitHub Integration
+- Remote Backend Configuration
+- Cloud Block Configuration
+- State Migration
+- CLI-Driven Runs
+- VCS-Driven Runs
 
 ---
 
 # What Is HCP Terraform?
 
-HCP Terraform is a cloud-hosted platform that manages Terraform operations.
+HCP Terraform is a cloud-based platform that manages Terraform workflows.
 
-Instead of running Terraform locally:
+Without HCP Terraform:
 
 ```text
 Developer Laptop
-      │
-      ▼
-Terraform CLI
+        │
+        ▼
+terraform plan
+terraform apply
+        │
+        ▼
+Cloud Infrastructure
 ```
 
-Terraform runs in:
+---
+
+With HCP Terraform:
 
 ```text
+Developer
+      │
+      ▼
 HCP Terraform
+      │
+      ▼
+Plan
+Apply
+State
+Policies
+Collaboration
+      │
+      ▼
+Cloud Infrastructure
 ```
 
 ---
 
 # Why HCP Terraform Exists
 
-Local Terraform works well for:
+As organizations scale Terraform usage, several challenges emerge:
 
-- Learning
-- Small Projects
-- Individual Developers
-
-However larger teams need:
-
-- Shared State
-- Collaboration
+- State Management
+- Team Collaboration
 - Access Control
-- Auditing
 - Governance
+- Compliance
+- Change Visibility
 
-HCP Terraform provides these capabilities.
+HCP Terraform solves these problems by centralizing Terraform operations.
 
 ---
 
-# Key Features
+# Key HCP Terraform Features
 
 ## Remote State Storage
 
 Stores Terraform state centrally.
 
----
+Benefits:
 
-## State Locking
-
-Prevents concurrent state modifications.
+- Shared State
+- Backups
+- Security
+- Collaboration
 
 ---
 
@@ -111,23 +162,38 @@ Prevents concurrent state modifications.
 
 Runs Terraform remotely.
 
+Benefits:
+
+- Consistency
+- Security
+- Standardized Workflows
+
 ---
 
 ## Team Collaboration
 
-Multiple engineers share workflows.
+Supports:
+
+- Multiple Users
+- Teams
+- Shared Workspaces
+- Approval Workflows
 
 ---
 
-## Audit Trails
+## Governance
 
-Tracks infrastructure changes.
+Provides:
+
+- Policy Enforcement
+- Access Controls
+- Audit Logging
 
 ---
 
-## Version Control Integration
+## Integrations
 
-Connects with:
+Supports:
 
 - GitHub
 - GitLab
@@ -136,86 +202,107 @@ Connects with:
 
 ---
 
-# HCP Terraform Architecture
+# HCP Terraform Workflow
+
+Typical workflow:
 
 ```text
-Developer
-     │
-     ▼
-Git Repository
-     │
-     ▼
-HCP Terraform
-     │
-     ▼
-Cloud Provider
+Git Commit
+      │
+      ▼
+VCS Integration
+      │
+      ▼
+HCP Terraform Run
+      │
+      ▼
+Plan
+      │
+      ▼
+Approval
+      │
+      ▼
+Apply
+      │
+      ▼
+State Update
 ```
 
 ---
 
-# Benefits
+# Domain Learning Outcomes
 
-## Centralized State
+After completing this domain, you should be able to:
 
-Single source of truth.
-
----
-
-## Security
-
-Credentials remain centralized.
-
----
-
-## Collaboration
-
-Teams share infrastructure workflows.
+- Explain HCP Terraform fundamentals
+- Create infrastructure using HCP Terraform
+- Describe governance capabilities
+- Use workspaces and projects
+- Configure HCP Terraform integrations
+- Understand remote execution workflows
 
 ---
 
-## Consistency
+# Relationship to Previous Domains
 
-Standardized execution environment.
+## Domains 1-7
+
+Focused on:
+
+- Terraform CLI
+- Local Workflows
+- State Management
+- Infrastructure Provisioning
 
 ---
 
-## Governance
+## Domain 8
 
-Policies and approvals can be enforced.
+Focuses on:
+
+- HCP Terraform Platform
+- Team Collaboration
+- Governance
+- Enterprise Terraform Workflows
 
 ---
 
-# Exam-Relevant Topics
+# High-Probability Exam Topics
 
 HashiCorp commonly tests:
 
-- What HCP Terraform is
-- Benefits of HCP Terraform
-- Remote State Storage
+- HCP Terraform
 - Remote Execution
-- Collaboration Features
 - Workspaces
+- Projects
+- Variable Sets
+- Cost Estimation
+- Policy Enforcement
+- terraform login
 - VCS Integration
+- Remote State
+- CLI-driven Runs
+- VCS-driven Runs
 
 ---
 
 # Recommended Study Order
 
-1. HCP Terraform Basics
-2. Workspaces
-3. Remote Workflow
-4. Practice Questions
-5. Revision Sheet
+1. Use HCP Terraform to Create Infrastructure
+2. Collaboration and Governance Features
+3. Workspaces and Projects
+4. HCP Terraform Integration
 
 ---
 
 # Objectives Covered
 
-| Objective                 | Status |
-| ------------------------- | ------ |
-| 8a HCP Terraform Benefits | ⬜      |
-| 8b Workspaces             | ⬜      |
-| 8c Workflow               | ⬜      |
+| Objective                     | Status |
+| ----------------------------- | ------ |
+| 8a Create Infrastructure      | ⬜      |
+| 8b Collaboration & Governance | ⬜      |
+| 8c Workspaces & Projects      | ⬜      |
+| 8d Integrations               | ⬜      |
 
 ---
 
@@ -224,6 +311,7 @@ HashiCorp commonly tests:
 - [ ] Completed 8a
 - [ ] Completed 8b
 - [ ] Completed 8c
+- [ ] Completed 8d
 - [ ] Completed Practice Questions
 - [ ] Completed Revision Sheet
-- [ ] Terraform Associate (004) Syllabus Complete
+- [ ] Terraform Associate (004) Exam Ready
